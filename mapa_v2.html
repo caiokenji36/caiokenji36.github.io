@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>🌏 Mapa_v2</title>
+    <link rel="stylesheet" href="style_v2.css">   
+  </head>
+  <body style="margin:0; padding:0;">
+
+    <main class="container">
+    	<h2 align="center">GO BEER</h2>
+    	<form id="calculate-route" name="calculate-route" action="#" method="get">
+      		<label for="from">De:</label>
+      		<input type="text" id="from" name="from" required="required" placeholder="Seu endereço" size="30" />
+      		<a id="from-link" href="#">Minha posição</a>
+      		<br/><br/>
+      		<label for="to">Para:</label>
+      		<input type="text" id="to" name="to" required="required" placeholder="Destino" size="30" />
+      		<br/><br/>
+      		<input type="submit" />
+      		<input type="reset" />
+    	</form>
+ 		<div id="map" class="map" align="center"></div>
+    	<div id="info" class="info"></div>
+    </main>	
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNy9R5IT5yu5Za8IdOTUsUp3urF6sZOcI&callback=init">  
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="script_v2.js"></script>
+    <!--https://www.sitepoint.com/find-a-route-using-the-geolocation-and-the-google-maps-api/-->
+  </body>
+</html>

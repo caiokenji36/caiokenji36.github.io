@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GOBEER - Quem Somos</title>
+  <link rel="icon"  href="imagens/favicon1.png">
+  <meta charset="utf-8">
+  <!--Estilo-->
+  <link rel="stylesheet" type="text/css" href="css/estilo4.css">
+
+  <!--Normalize-->
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+</head>
+<body>
+
+  <!-- MENU FIXO -->
+  <header id="barraprincipal">
+    <div class="area">
+     
+      <div id="menu">
+        <a href="index.php">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- AREA DE DADOS DO USUÁRIO -->
+  <section class="area">
+    <div class="alinhamento-bordas info">
+      
+      
+      
+
+      
+      <p class="alinhamento borda" id="a">
+      
+
+          <h3>Quem somos?</h3></br>
+
+        Desenvolvido em 2019, o GoBeer surgiu como um trabalho acadêmico da Faculdade de Tecnologia de Carapicuíba. Não me leve a mal, mas o que a maioria dos universitários tem em comum? Gostam de beber uma cervejinha para aliviar o estresse do dia a dia! E claro, nós, Fatecanos, não somos diferentes. Mas como fazemos para buscar um bar que nos agrade se estivermos em lugar que não conhecemos? Daí surgiu a ideia de desenvolver uma plataforma que facilite a busca de bares próximos à você, com filtros (preço, atendimento e atrações) que deixam sua busca bem mais dinâmica e acertiva. A partir dessa ideia, adicionamos algumas outras funcionalidades para facilitar as coisas para você e tcharam... GoBeer!</br></br>
+
+        <h3>Como funciona?</h3></br>
+        Juntamos tudo o que você precisa em um só app, te mostramos quais os bares mais próximos, qual a melhor rota para chegar até o local, além de disponibilizarmos avaliações dos usuários, para que você possa saber o que outros usuários acharam do estabelecimento. Os bares cadastrados têm um perfil que você pode visitar para ver informações adicionais e/ou deixar sua opinião.</br></br>
+
+       <h3> O que você está esperando? Junte-se a nós e aproveite!</h3>
+
+      </p>
+      
+      
+    </div>
+  </section>
+</body>
+</html>

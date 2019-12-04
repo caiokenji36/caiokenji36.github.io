@@ -1,0 +1,274 @@
+<?php 
+  // caso a condicao seja verdadeira ele executa a acao antes do : 
+  //caso seja falsa ele executa a direita do : ,aqui seria o 0
+  $erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
+  
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GoBeer</title>
+    <link rel="icon"  href="imagens/favicon1.png"> <!--Icone que aparece na aba do navegador -->
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index2.css" rel="stylesheet">
+
+   <script>
+      $(document).ready( function(){
+        //verificar se os campos do usuario e senha foram devidamente preenchidos
+        $('#btn_login').click(function(){
+
+          var campo_vazio = false;
+          //verificar se o campo usuario esta preenchido,pelo seu id
+          if($('#campo_usuario').val() ==''){
+            $('#campo_usuario').css({'border-color': '#A94442'});
+            campo_vazio = true;
+          } else{
+            $('#campo_usuario').css({'border-color': '#CCC'})
+          }
+          if($('#campo_senha').val() ==''){
+            $('#campo_senha').css({'border-color': '#A94442'})
+            campo_vazio = true;
+          }else{
+            $('#campo_senha').css({'border-color': '#CCC'})
+          }
+          if(campo_vazio) return false;
+        });
+      });         
+    </script>
+
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse navbar-transparente">
+      <div class="container">
+        <!-- Header -->
+        <div class="navbar-header">
+            <!-- botao toggle -->
+            <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#barra-navegacao">
+              <span class="sr-only">alternar navegacao</span> <!-- Apenas para leitores de telas -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          <a href="index.php" class="navbar-brand">
+            
+            <span class="img-logo"></span>
+          </a>
+        </div>
+          <!-- Navbar -->
+          <div class="collapse navbar-collapse" id="barra-navegacao">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="quemsomos.php">Quem somos</a></li>
+              
+              <li><a href="">Baixar</a></li>
+               <li class="divisor" role="separator"></li>
+             <li><a href="entrar.php">Inscrever-se</a></li> 
+
+      <li class="<?=$erro == 1 ? 'open' : '' ?>">
+                <a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>
+          <ul class="dropdown-menu" aria-labelledby="entrar">
+            <div class="col-md-12">
+                <p>Você possui uma conta?</h3>
+                <br />
+              <form method="post" action="validar_acesso.php" id="formLogin">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="campo_usuario" name="usuario" placeholder="Usuário" required/>
+                </div>
+                
+                <div class="form-group">
+                  <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" required/>
+                </div>
+                
+                <button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
+
+                <br /><br />
+                
+              </form>
+              <?php 
+                if($erro ==1){
+                  echo '<font color="#FF000">Usuário e ou senha inválidos(s)</font>';
+                }
+              ?>
+            </form>
+            </ul>
+              </li>
+            </ul>
+          </div>
+
+      </div> <!-- /container  acaba aqui-->
+      
+    </nav> <!-- /nav termina aqui-->
+
+
+
+
+
+
+
+            </ul>
+          </div>
+
+      </div> <!-- /container  acaba aqui-->
+      
+    </nav> <!-- /nav termina aqui-->
+
+
+    <div class="capa">
+      <div class="texto-capa">
+        <h1>Bares para todos</h1>
+        <a href="" class="btn btn-custom btn-roxo btn-lg">Encontrar Bares</a>
+        <a href="" class="btn btn-custom btn-branco btn-lg">Testeeeeeeeeee</a>
+      </div>
+    </div>
+
+    <!-- Conteudos-->
+    <section id="servicos">
+      <div class="container">
+        <div class="row">  <!-- Cria as linhas-->
+          <!-- Albuns-->
+          <div class="col-md-6" > <!-- Cria  colunas-->
+            <div class="row albuns"> <!-- Cria  mais uma linha-->
+              <div class="col-md-6">
+                <img src="imagens/img1.jpg" class="img-responsive">
+              </div>
+              <div class="col-md-6">
+                <img src="imagens/img2.jpg" class="img-responsive">
+              </div>
+            </div> <!-- Cfim da row-->
+
+              <div class="row albuns"> <!-- Cria  mais uma linha-->
+              <div class="col-md-6">
+                <img src="imagens/img3.jpg" class="img-responsive">
+              </div>
+              <div class="col-md-6">
+                <img src="imagens/img4.jpg" class="img-responsive">
+              </div>
+            </div> <!-- Cfim da row-->
+
+          </div>
+          <div class="col-md-6" > <!-- Cria  colunas-->
+            <h2>O que o GoBeer tem?</h2>
+
+            <h3>Você no controle!</h3>
+            <p>Encontre os bares que são a sua cara com apenas um clique!</p>
+
+            <h3>Quem somos?</h3>
+            <p>Desenvolvido em 2019, o GoBeer surgiu como um trabalho acadêmico da Faculdade de Tecnologia de Carapicuíba. Não me leve a mal, mas o que a maioria dos universitários tem em comum? Gostam de beber uma cervejinha para aliviar o estresse do dia a dia! E claro, nós, Fatecanos, não somos diferentes.</p>
+
+            <h3>Como funciona?</h3>
+            <p>Juntamos tudo o que você precisa em um só app, te mostramos quais os bares mais próximos, qual a melhor rota para chegar até o local, além de disponibilizarmos avaliações dos usuários, para que você possa saber o que outros usuários acharam do estabelecimento. </p>
+          </div>
+
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="recursos">
+      <div class="container">
+        <div class="row">
+          <!-- recursos-->
+          <div class="col-md-4">
+            <h2>Fácil</h2>
+
+            <h3>Buscar</h3>
+            <p>Já sabe o que quer beber? É só apertar em pesquisar.</p>
+
+            <h3>Navegar</h3>
+            <p>Veja todos os bares, o que esta bombando  e os melhores bares para o seu momento.</p>
+
+            <h3>Descobrir</h3>
+            <p>Curta novos bares com um sistema de pesquisa  personalizada pra você.</p>
+          </div>
+          <!-- img recursos-->
+           <div class="col-md-8">
+             
+              <div class="row rotacionar "> <!-- Cria  mais uma linha-->
+              <div class="col-md-6">
+                <img src="imagens/iphone1.png" class="img-responsive">
+              </div>
+              <div class="col-md-6">
+                <img src="imagens/iphone2.png" class="img-responsive">
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodape-->
+
+<footer id="rodape">
+  <div class="container">
+    <div class="row"> <!-- row-->
+      <div class="col-md-2">
+        <span class="img-logo">Spotify</span>
+      </div>
+      <div class="col-md-2">
+        <h4>Company</h4>
+        <ul class="nav">
+          <li><a href="">Sobre</a></li>
+          <li><a href="">Empregos</a></li>
+          <li><a href="">Imprensa</a></li>
+          <li><a href="">Novidades</a></li>
+        </ul>
+      </div>
+
+       <div class="col-md-2">
+        <h4>Comunidades</h4>
+        <ul class="nav">
+          <li><a href="">Artistas</a></li>
+          <li><a href="">Desenvolvedores</a></li>
+          <li><a href="">Marcas</a></li>
+          
+        </ul>
+      </div>
+
+
+       <div class="col-md-2">
+        <h4>Links uteis</h4>
+        <ul class="nav">
+          <li><a href="">Ajuda</a></li>
+          <li><a href="">Presentes</a></li>
+          <li><a href="">Player da web</a></li>
+         
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+
+        <ul class="nav">
+          <li class="item-rede-social"><a href=""><img src="imagens/facebook.png"></a></li>
+          <li class="item-rede-social"><a href=""><img src="imagens/twitter.png"></a></li>
+          <li class="item-rede-social"><a href=""><img src="imagens/instagram.png"></a></li>         
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.label_test{
+	padding: 15px;
+	position: absolute;
+	z-index: 1;
+	
+}
+
+.link{
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 20px 5px;
+	color: white; 
+
+}
+.linkk{
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 50px 5px;
+	color: white; 
+
+}
+
+
+.body_test{
+	font-family: arial;
+	
+}
+
+.ul_class{
+	list-style: none;
+	position: absolute;
+	top: 70px;
+	width: 100%;
+	
+}
+
+input[type="checkbox"]:checked ~ .nav_test{
+	transform: translateX(350px);
+}
+
+
+.img_logo{
+	width: 25px;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+.nav_test{
+	background-color: black;
+	width: 350px;
+	height: 100%;
+	left: -350px;
+	position: absolute;
+	transition: all .5s;
+}
+.nav_testt{
+	background-color: black;
+	width: 350px;
+	height: 100%;
+	left: -350px;
+	position: absolute;
+}
+
+
+.link:hover{
+	background-color: rgb(176,224,230);
+	color: black; 
+}
+.linkk:hover{
+	background-color: rgb(176,224,230);
+	color: white; 
+}

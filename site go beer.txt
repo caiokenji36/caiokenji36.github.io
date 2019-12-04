@@ -1,0 +1,133 @@
+<! DOCTYPE html>
+<html>
+<body>
+	<h1 style="text-align:center;">Bem-vindo(a) a GoBeer!</h1>
+
+	<p style="text-align:center;">Um aplicativo para quem gosta de beber.</p>
+<center>
+	<a href="https://www.google.com.br" target="_blank">
+	<img src="imagens/goo.jpg">
+</a>
+</center>
+
+<body>
+</html>
+
+
+ir em cd desktop
+cd site
+git init
+
+git remote add origin https://github.com/caiokenji36/caiokenji.github.io.git
+
+git add .
+
+git status
+
+git commit -m "Arquivos iniciais"
+
+git push origin master
+
+//quando vc muda algo no site
+git status
+
+git add.
+
+git push origin master
+
+
+
+commit
+Realizar uma mudança no projeto; mais formalmente, armazenar uma mudança no banco de dados de controle de versão de uma forma que ela possa ser incorporada em versões futuras do projeto.
+
+update
+Solicitar que as mudanças dos demais (commits) sejam incorporadas em sua cópia local do projeto; ou seja, deixar a sua cópia “atualizada”.
+
+branch (ou ramo)
+Uma cópia do projeto sob o controle de versão, porém isolada de uma maneira que as mudanças realizadas no branch não afetem o resto do projeto e vice-versa, exceto quando as mudanças são deliberadamente mescladas (“merge”) de um lado para o outro (veja abaixo). Branches (ou ramos) também são conhecidas como “linhas de desenvolvimento”. Mesmo quando um projeto não possui branches explícitas, o desenvolvimento ainda é considerado como sendo executado no “branch principal”, também conhecido como “linha principal” ou “trunk“.
+
+Branches oferecem uma maneira isolada de diferentes linhas de desenvolvimento entre eles. Por exemplo, um branch pode ser usado para um desenvolvimento experimental que poderia desestabilizar muito a linha principal (ou trunk). Assim como uma branch pode ser usada como um local para estabilizar uma nova release. Durante o processo de release, o desenvolvimento regular continua sem interrupções no branch principal do repositório; enquanto isso, na branch da release, nenhuma mudança é permitida com exceção daquelas que são aprovadas pelos gerentes de releases. Desta forma, disponibilizar uma release não precisa interferir no andamento dos trabalhos de desenvolvimento.
+
+
+
+criando o repositorio
+cd desktop
+mkidr meu-site
+cd meu-site
+
+iniciar repositorio
+git init
+
+ver os arquivos que tem
+git status
+
+para ir para o modo modified
+git add test.txt
+
+dar o commit
+git commit -m "testando o commit"
+
+quando modificar
+git add test.txt de novo
+
+remover arquivos
+git rm <arquivo>
+
+remover varios arquivos
+git rm \*
+
+movendo arquivos de diretorios
+git mv <arquivo_origem> <arquivo_destino>
+
+ignorando arquivos
+tem que criar um arquivo chamado .gitignore
+pasta/*  para ele ignorar essas pasta
+.arquivo  para ele ignorar aquele arquivo
+
+visualizar mudancas
+git diff
+
+para ver o historico de commit
+git log
+
+git diff <arquivo>
+
+editar um arquivo
+vi test.txt
+para inserir alguma coisa aperta I
+para salvar, aperta esc e depois :wq e aperta enter
+
+
+git log --decorate
+
+vai mostrar todos commit do caio
+git logg --author="Caio"
+
+mostra todos commits de todos atores
+git shortlog
+
+git shortlog -sn
+
+git log --graf
+
+mostra a mudanca que foi feito, fazer isso antes de dar o commit
+git diff
+
+ele reseta o arquivo para onde vc tinha salvo, antes do arquivo ser add
+git checkout test.txt
+
+ele volta o arquivo que ja tinha sido add
+git reset HEAD test.txt
+
+voltar do commit
+git reset --soft  --mixed  --hard
+
+--soft mata o commit e volta para o modified pronto para o commit de novo
+--mixed mata o commit e volta para o modified mas ainda tem que add de  novo
+--hard mata o arquivo totalmente
+
+git push origin master
+
+fork 
+faz uma copia de algum repositorio que nao e seu
+
