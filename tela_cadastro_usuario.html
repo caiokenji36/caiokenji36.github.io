@@ -63,11 +63,7 @@
               <label class="texto"><b>Insira um login*</b></label>
               <input id="name" type="text" class="form-control" placeholder="Login" name="login" minlength="5" maxlength="10" pattern="[a-zA-Z0-9_]+" required>
               <label>
-                <?php
-                    if ($erro_login == 1) {
-                      echo "<font style: color= red>Este login ja está em uso!</font>";
-                    }
-                ?>
+              
               </label>
             </div>
           </div><!-- / FIM DA ENTRADA DO LOGIN -->
@@ -86,11 +82,7 @@
               </div>
               <label>
               	<!-- MENSAGEM CASO JÁ EXISTA ALGUM E-MAIL CADASTRADO -->
-                <?php
-                  if ($erro_email) {
-                    echo "<font style: color= red>Este E-mail já está em uso!</font>";
-                  }
-                ?>
+              
               </label>                                   
           </div><!-- // FIM DA ENTRADA DO E-MAIL -->
           <!-- ENTRADA DO NOME DO USUÁRIO -->
