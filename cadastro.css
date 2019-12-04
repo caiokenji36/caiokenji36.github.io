@@ -1,0 +1,97 @@
+/* ===== TAGS PRINCIPAIS ===== */
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	text-align: justify;
+	font-family: ff-clan-web-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: black;
+	background:	url('img/ruido.png'), /* se nao quiser que repita a imagem coloque no-repeat */
+				linear-gradient(50deg,#f68f0d,#FFFF00);
+}
+
+/* =============================================== */
+/* =============================================== */
+
+/* =============================================== */
+             /* ------- MENU -------*/
+
+nav.navbar-transparente {
+	background: black;
+	padding: 5px 0px;
+	border: none;
+}
+
+.img-logo{
+	height: 40px;
+	width: 132px;
+	display: block;
+	background: url("img/gobeer.png") no-repeat;
+	background-size: contain;
+	color: transparent;
+	position: relative;
+}
+
+.navbar-brand{
+	padding: 5px 15px;
+	margin: auto;
+}
+
+
+/* =============================================== */
+/* =============================================== */
+
+/* =============================================== */
+			/* ------- CADASTRO BAR ------ */
+
+.cadastro{
+	width: 68%;
+	text-align: center;
+	margin: 40px auto;
+	padding: 1% 8% 1% 5%;
+}
+
+.cadastro p{
+	padding-bottom: 20px;
+	margin: auto;
+	letter-spacing: -2px;
+	font-size: 23px;
+	line-height: 30px;
+}
+
+.cadastro input, textarea{
+	margin: auto;
+	width: 100%;
+	font-size: 13px;
+}
+
+.cadastro button{
+	width: 100%;
+	vertical-align: middle;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.texto{
+	line-height: 24px;
+	font-weight: 500;
+	font-size: 11px;
+	margin-top: 5px;
+	margin-bottom: -2px;
+	visibility: visible;
+	display: block;
+	float: left;
+}
+
+.texto2{
+	color: red;
+	line-height: 24px;
+	font-weight: 500;
+	font-size: 11px;
+	margin-top: 5px;
+	margin-bottom: -2px;
+	visibility: visible;
+	display: block;
+	float: left;
+}
