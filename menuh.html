@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Go Beer</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="icon"  href="imagens/favicon1.png"> 
+<link rel="stylesheet" href="menuh2.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		
+	<!-- Abre as outras abas do menu -->
+<script type="text/javascript">
+	 $(document).ready(function() {
+ var botao = $('.aaa'); //classe no a
+ var dropDown = $('.ul-secundario'); //classe do submenu que vai abrir  
+
+    botao.on('click', function(event){
+        dropDown.stop(true,true).slideToggle();
+        event.stopPropagation();
+    });
+});
+</script>
+	 <script type="text/javascript">
+	 $(document).ready(function() {
+ var botao = $('.aaaa'); //classe no a
+ var dropDown = $('.ul-secundario2'); //classe do submenu que vai abrir  
+
+    botao.on('click', function(event){
+        dropDown.stop(true,true).slideToggle();
+        event.stopPropagation();
+    });
+});
+
+
+</script>
+
+		</head>
+
+<body class="body_test">
+
+	<!-- Comeco do menu lateral -->
+	<input type="checkbox" id="chec">
+	<label class="label_test" for="chec">
+		<img class="img_logo" src="imagens/icone.png">
+
+<!-- Comeco do menu lateral -->
+	<input type="checkbox" id="chec">
+	<label class="label_test" for="chec">
+		<img class="img_logo" src="imagens/icone.png">
+
+	</label>
+	<nav class="nav_test">
+		<ul class="ul_class">
+
+    
+    
+
+			
+				<!--Salvar imagem no BD -->
+			<form action="menuh.php" method="POST" enctype="multipart/form-data">
+
+
+				<div><li>
+					<!-- Final do salvar imagem -->
+				<a class="linkk" href=""><?= '<strong>'.ucfirst($_SESSION['usuario']).'</strong>' ?></a>
+			</li></div>
+			
+		
+			<li><a class="link" href="perfil-usuu.php">Perfil</a></li>
+			
+			<li><a class="link" href="favoritos.php">Favoritos</a></li>
+			<li><a class="link" href="calendario.php">Calendário</a></li>
+			<li><a class="link" href="amigos.php">Amigos</a></li>
+			<li><a class="link" href="sair.php">Sair</a></li>
+
+
+
+		</ul>
+
+	</nav>
+
+	
+<!-- comeco do hodape -->
+
+	
+
+	<nav class="nav-testt">
+		<ul id="ul-principal">
+			<li class="li-p"><a class="aa" href="favoritos.php">Favoritos</a></li>
+			<li class="li-p">
+				<a class="aaa" href="javascript://">Histórico
+					<img src="imagens/seta1.png" width="12px">
+				</a>
+				<ul class="ul-secundario">
+					<li class="li-s"><a class="aa" href="historico_avaliados.php">Bares avaliados</a></li>
+					<li class="li-s"><a class="aa" href="historico_pesquisados.php">Bares pesquisados</a></li>
+					
+				</ul>
+			</li>
+			<li class="li-p">
+				<a class="aaaa" href="javascript://">Ranking
+					<img src="imagens/seta1.png" width="12px">
+				</a>
+				<ul class="ul-secundario2">
+					<li class="li-s"><a class="aa" href="ranking_geral.php">Ranking Geral</a></li>
+					<li class="li-s"><a class="aa" href="ranking_precos.php">Ranking Preços</a></li>
+					<li class="li-s"><a class="aa" href="ranking_atendimento.php">Ranking Atendimento</a></li>
+					
+				</ul>
+			
+			<li class="li-p"><a class="aa" href="">Pesquisar Bares</a></li>
+			
+		</ul>
+	</nav>
+
+<!-- Fim do hodape -->
+
+
+		<div class="container theme-showcase" role="main">
+			<div class="page-header">
+				<br>
+				<br>
+					<div class="text-center">
+					
+						<form method="GET" action="vitrine2.php" enctype="multipart/form-data">
+      <label for="from">From:</label>
+      <input type="text" id="from" name="from" required="required" placeholder="An address" size="30" />
+      <a id="from-link" href="#">Use minha localização atual</a>
+      <input type="submit" value="Enviar">
+						</div>
+					</form>
+					
+				<br>
+				<br>
+				<div class="row">
+					<div class="col-sm-6 col-md-6">
+					<h1 id="pes">Bares</h1>
+					</div>
+					<br>
+					<div class="col-sm-6 col-md-6">
+					<form class="form-inline" method="GET" action="pesquisar.php">
+							<div class="form-group">
+								<label for="exampleInputName2" >Pesquisar</label>
+								<input type="text" name="pesquisar" class="form-control" id="exampleInputName2" placeholder="Digitar...">
+							</div>
+							<button type="submit" class="btn btn-primary">Pesquisar</button>
+						</form>
+					</div>
+
+
+
+
+
+
+					<div class="col-md-6">
+					<form class="form-inline" method="GET" action="pesquisarMedia.php">
+							<div class="form-group">
+							
+					
+							</div>
+							<button type="submit" class="btn btn-primary">Média Geral</button>
+								</form>
+							</div>
+								<div class="col-md-6">
+							<form class="form-inline" method="GET" action="preco.php">
+							<div class="form-group">
+								
+							</div>
+							<button type="submit" class="btn btn-primary">Melhor preço</button>
+							</form>
+						</div>
+						<div class="col-md-6">
+							<form class="form-inline" method="GET" action="melhor.php">
+							<div class="form-group">
+								
+							</div>
+							<button type="submit" class="btn btn-primary">Melhor Atendimento</button>
+						
+					
+						</form>
+					</div>
+					
+			
+	
+		</div>
+	</div>
+					
+					
+							
+						
+					
+	
+			<div class="row">
+
+
+
+<div class="col-sm-6 col-md-6">
+						<div class="thumbnail">
+							
+
+							<a href="verBar.php?id_bar=<?php echo $rows_bar['idBar'];?>"><img src="imagensBar/37a39688ebb274bf69e28940b2ce1cc8.jpg" alt="" id="box"> </a>
+							
+							<div class="caption text-center">
+							
+						
+								<h3>Caio </h3>
+								<h3>Rua dona primitiva vianco </h3>
+								<p>Aberto</p>
+								
+								
+								<div class="col-md-1"><h4>3.9</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/estrela.png" width="30px" height="30px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>(10)</h4></div>
+								
+								
+									
+									
+								<div class="col-md-1"><h4>|</h4></div>
+								<div class="col-md-1"><h4>3.8</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/emoji.png" width="35px" height="35px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>(10)</h4></div>
+
+								<div class="col-md-1"><h4>|</h4></div>
+
+								<div class="col-md-1"><h4>3.2</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/dinheiro.png" width="30px" height="30px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>8</h4></div>
+								
+								
+
+								
+								<p><a href="verBarCaio.html" class="btn btn-primary" role="button">Ver</a> </p>
+							</div>
+						</div>
+					</div>
+
+
+<div class="col-sm-6 col-md-6">
+						<div class="thumbnail">
+							
+
+							<a href="verBar.php?id_bar=<?php echo $rows_bar['idBar'];?>"><img src="imagensBar/62b44ffdcf1ca0645cd3ea32848904b0.png" alt="" id="box"> </a>
+							
+							<div class="caption text-center">
+							
+						
+								<h3>Bar Doca </h3>
+								<h3>Rua Jose Joaquim da Ressureição 393 </h3>
+								<p>Fechado</p>
+								
+								
+								<div class="col-md-1"><h4>4.3</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/estrela.png" width="30px" height="30px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>(3)</h4></div>
+								
+								
+									
+									
+								<div class="col-md-1"><h4>|</h4></div>
+								<div class="col-md-1"><h4>4.0</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/emoji.png" width="35px" height="35px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>(3)</h4></div>
+
+								<div class="col-md-1"><h4>|</h4></div>
+
+								<div class="col-md-1"><h4>3.6</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/dinheiro.png" width="30px" height="30px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>3</h4></div>
+								
+								
+
+								
+								<p><a href="verBar.php?id_bar=<?php echo $rows_bar['idBar'];?>" class="btn btn-primary" role="button">Ver</a> </p>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="col-sm-6 col-md-6">
+						<div class="thumbnail">
+							
+
+							<a href="verBar.php?id_bar=<?php echo $rows_bar['idBar'];?>"><img src="imagensBar/0945d99c9aec9dbe693dbdea6b1c1a6d.png" alt="" id="box"> </a>
+							
+							<div class="caption text-center">
+							
+						
+								<h3>Bar Teste </h3>
+								<h3>Rua Joaquim </h3>
+								<p>Fechado</p>
+								
+								
+								<div class="col-md-1"><h4>3.0</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/estrela.png" width="30px" height="30px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>(4)</h4></div>
+								
+								
+									
+									
+								<div class="col-md-1"><h4>|</h4></div>
+								<div class="col-md-1"><h4>3.0</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/emoji.png" width="35px" height="35px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>(4)</h4></div>
+
+								<div class="col-md-1"><h4>|</h4></div>
+
+								<div class="col-md-1"><h4>4.0</h4></div>
+								<div class="col-sm-1"><img src="imagensBar/dinheiro.png" width="30px" height="30px" alt="..."></div>
+								<div class="col-md-1" id=""> <h4>4</h4></div>
+								
+								
+
+								
+								<p><a href="verBar.php?id_bar=<?php echo $rows_bar['idBar'];?>" class="btn btn-primary" role="button">Ver</a> </p>
+							</div>
+						</div>
+					</div>
+
+
+
+
+</body>
+</html>﻿
+
